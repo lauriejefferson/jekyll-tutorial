@@ -1,8 +1,8 @@
 - name: Home
-  link: /jekyll-tutorial
+  link: /
 - name: About
-  link: /jekyll-tutorial/about.html
+  link: /about.html
 - name: Blog 
-  link: /jekyll-tutorial/blog.html
+  link: /blog.html
 - name: Staff
-  link: /jekyll-tutorial/staff.html
+  link: /staff.html

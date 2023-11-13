@@ -11,6 +11,8 @@ nav { display: flex; justify-content: center; align-items: center; }
 
 nav a { margin-right: 1em; color: #f6f2ff; }
 
+.nav-links { display: flex; flex-direction: column; }
+
 .current { color: greenyellow; }
 
 ul, li { padding: 0; }

@@ -36,6 +36,10 @@ nav a {
   color: #f6f2ff;
 }
 
+.nav-links {
+  display: flex;
+  flex-direction: column;
+}
 .current {
   color: greenyellow;
 }
