@@ -1,6 +1,6 @@
 domain: lauriejefferson.github.io
 url: https://lauriejefferson.github.io
-baseurl: /jekyll-tutorial/
+baseurl: ""
 
 collections:
   authors:
