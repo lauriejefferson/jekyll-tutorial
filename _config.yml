@@ -1,7 +1,3 @@
-domain: lauriejefferson.github.io
-url: https://lauriejefferson.github.io
-baseurl: ""
-
 collections:
   authors:
     output: true 
