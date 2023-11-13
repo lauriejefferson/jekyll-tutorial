@@ -1,52 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
+*, *::before, *::after { box-sizing: border-box; }
 
-:root {
-  --ff-body: "Lato", sans-serif;
-  --fw-400: 400;
-  --fw-700: 700;
-}
+:root { --ff-body: 'Lato', sans-serif; --fw-400: 400; --fw-700: 700; }
 
-body {
-  background-color: #2b303a;
-  max-width: 960px;
-  margin: 0 auto;
-  font-family: var(--ff-body);
-  font-size: 1.25rem;
-  color: #f6f2ff;
-}
+body { background-color: #2b303a; max-width: 960px; margin: 0 auto; font-family: var(--ff-body); font-size: 1.25rem; color: #f6f2ff; }
 
-a {
-  text-decoration: none;
-  color: #ea2b1f;
-}
+a { text-decoration: none; color: #ea2b1f; }
 
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+nav { display: flex; justify-content: center; align-items: center; }
 
-nav a {
-  margin-right: 1em;
-  color: #f6f2ff;
-}
+nav a { margin-right: 1em; color: #f6f2ff; }
 
-.current {
-  color: greenyellow;
-}
+.current { color: greenyellow; }
 
-ul,
-li {
-  padding: 0;
-}
+ul, li { padding: 0; }
 
-li {
-  list-style-type: none;
-}
-
-/*# sourceMappingURL=styles.css.map */
+li { list-style-type: none; }

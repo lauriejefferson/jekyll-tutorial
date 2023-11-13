@@ -1,6 +1,5 @@
 ---
 title: About
-permalink: /jekyll-tutorial/about
 ---
 # About page
 
