@@ -1,13 +1,15 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Martel:wght@400;700&display=swap");
 *, *::before, *::after { box-sizing: border-box; }
 
-:root { --ff-body: 'Lato', sans-serif; --fw-400: 400; --fw-700: 700; }
+:root { --ff-body: 'Martel', serif; --ff-heading: 'Karla', serif; --fw-400: 400; --fw-700: 700; }
 
-body { background-color: #2b303a; max-width: 960px; margin: 0 auto; font-family: var(--ff-body); font-size: 1.25rem; color: #f6f2ff; }
+body { background-color: #2b303a; max-width: 960px; margin: 0 auto; font-family: var(--ff-body); font-size: 1.25rem; font-weight: var(--fw-400); color: #f6f2ff; line-height: 1.2; }
 
-a { text-decoration: none; color: #ea2b1f; }
+h1, h2, h3, h4, h5, h6 { font-family: var(--ff-heading); font-weight: var(--fw-700); }
 
-nav { display: flex; justify-content: center; align-items: center; }
+a { text-decoration: none; color: #fa7921; }
+
+nav { display: flex; justify-content: center; align-items: center; margin: 1em 0; }
 
 nav a { margin-right: 1em; color: #f6f2ff; }
 
@@ -17,4 +19,4 @@ nav a { margin-right: 1em; color: #f6f2ff; }
 
 ul, li { padding: 0; }
 
-li { list-style-type: none; }
+li { list-style-type: none; margin: 2em 0; }

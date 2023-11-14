@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Martel:wght@400;700&display=swap');
 
 *,
 *::before,
@@ -7,10 +7,16 @@
 }
 
 :root {
-  --ff-body: 'Lato', sans-serif;
+  --ff-body: 'Martel', serif;
+  --ff-heading: 'Karla', serif;
   --fw-400: 400;
   --fw-700: 700;
 }
+
+$bg-color: #2b303a;
+$clr-text: #f6f2ff;
+$clr-link: #fa7921;
+$clr-current: greenyellow;
 
 body {
   background-color: #2b303a;
@@ -18,22 +24,36 @@ body {
   margin: 0 auto;
   font-family: var(--ff-body);
   font-size: 1.25rem;
-  color: #f6f2ff;
+  font-weight: var(--fw-400);
+  color: $clr-text;
+  line-height: 1.2;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--ff-heading);
+  font-weight: var(--fw-700);
 }
 
 a {
   text-decoration: none;
-  color: #ea2b1f;
+  color: $clr-link;
 }
+
 nav {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1em 0;
 }
 
 nav a {
   margin-right: 1em;
-  color: #f6f2ff;
+  color: $clr-text;
 }
 
 .nav-links {
@@ -41,7 +61,7 @@ nav a {
   flex-direction: column;
 }
 .current {
-  color: greenyellow;
+  color: $clr-current;
 }
 
 ul,
@@ -51,4 +71,5 @@ li {
 
 li {
   list-style-type: none;
+  margin: 2em 0;
 }
