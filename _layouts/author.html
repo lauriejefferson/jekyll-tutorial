@@ -2,15 +2,21 @@
 layout: default
 ---
 
-<h1>{{page.name}}</h1>
-<h2>{{page.position}}</h2>
+<div class="page">
+  <div class="page__header">
+    <h1 page="page__author">{{page.name}}</h1>
+    <h2 page="page__position">{{page.position}}</h2>
+  </div>
 
-{{content}}
+  <div class="page__content">{{content}}</div>
 
-<h2>Posts</h2>
-<ul>
-  {% assign filtered_posts = site.posts | where: 'author', page.short_name %} {%
-  for post in filtered_posts %}
-  <li><a href="{{ post.url | relative_url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+  <h2 class="page__subtitle">Posts</h2>
+  <ul class="page__list">
+    {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+    {% for post in filtered_posts %}
+    <li class="page__link">
+      <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    </li>
+    {% endfor %}
+  </ul>
+</div>

@@ -2,6 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Bananas</title>
     <link
       rel="stylesheet"
@@ -28,7 +36,9 @@
 
   </head>
   <body>
-    <nav>
+    <nav class="nav">
+  <h1 class="logo">My Blog</h1>
+  <div class="nav-list">
   
     
     
@@ -40,18 +50,23 @@
   
     
     
-    <a href="/jekyll-tutorial/blog.html" >Blog</a>
+    <a href="/jekyll-tutorial/blog.html" >Posts</a>
   
     
     
     <a href="/jekyll-tutorial/staff.html" >Staff</a>
   
-
+   </div>
 </nav>
- <h1>Bananas</h1>
-<p>20 Aug 2018 - jill</p>
+ <div class="page">
+  <div class="page__header">
+    <h1 class="page__title">Bananas</h1>
+    <p class="page__text">
+      20 Aug 2018 - Jill
+    </p>
+  </div>
 
-<p>A banana is an edible fruit – botanically a berry – produced by several
+  <p class="page__content"><p>A banana is an edible fruit – botanically a berry – produced by several
 kinds of large herbaceous flowering plants in the genus Musa.</p>
 
 <p>In some countries, bananas used for cooking may be called “plantains”,
@@ -59,12 +74,32 @@ distinguishing them from dessert bananas. The fruit is variable in size,
 color, and firmness, but is usually elongated and curved, with soft
 flesh rich in starch covered with a rind, which may be green, yellow,
 red, purple, or brown when ripe.</p>
-
-<p>
-  20 Aug 2018   -
-  <a href="/jekyll-tutorial/authors/jill.html">Jill Smith</a>
-  
 </p>
+  <p class="page__footer">
+    20 Aug 2018   -
+    <a href="/jekyll-tutorial/authors/jill.html">Jill Smith</a>
+    
+  </p>
+</div>
+ <footer class="footer">
+  <p class="footer__text">
+    Built by
+    <a href="https://github.com/lauriejefferson">Laurie Jefferson</a> using
+    <a href="https://jekyllrb.com">Jekyll</a>
+  </p>
+  <ul class="footer__list">
+    <li class="footer__link">
+      <a href="#">
+        <ion-icon name="mail-outline" size="large"></ion-icon>
+      </a>
+    </li>
+    <li class="footer__link">
+      <a href="https://github.com/lauriejefferson">
+        <ion-icon name="logo-github" size="large"></ion-icon>
+      </a>
+    </li>
+  </ul>
+</footer>
 
   </body>
 </html>

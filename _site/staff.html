@@ -2,6 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Staff</title>
     <link
       rel="stylesheet"
@@ -27,7 +35,9 @@
 
   </head>
   <body>
-    <nav>
+    <nav class="nav">
+  <h1 class="logo">My Blog</h1>
+  <div class="nav-list">
   
     
     
@@ -39,33 +49,58 @@
   
     
     
-    <a href="/jekyll-tutorial/blog.html" >Blog</a>
+    <a href="/jekyll-tutorial/blog.html" >Posts</a>
   
     
     
     <a href="/jekyll-tutorial/staff.html"  class="current">Staff</a>
   
-
+   </div>
 </nav>
- <h1>Staff</h1>
+ <div class="staff">
+  <h1 class="staff__title">Staff</h1>
 
-<ul>
-  
-  <li>
-    <h2><a href="/jekyll-tutorial/authors/jill.html">Jill Smith</a></h2>
-    <h3>Chief Editor</h3>
-    <p><p>Jill is an avid fruit grower based in the south of France.</p>
+  <ul class="staff__list">
+    
+    <li class="staff__link">
+      <h2 class="staff__author">
+        <a href="/jekyll-tutorial/authors/jill.html">Jill Smith</a>
+      </h2>
+      <h3 class="staff__position">Chief Editor</h3>
+      <p><p>Jill is an avid fruit grower based in the south of France.</p>
 </p>
-  </li>
-  
-  <li>
-    <h2><a href="/jekyll-tutorial/authors/ted.html">Ted Doe</a></h2>
-    <h3>Writer</h3>
-    <p><p>Ted has been eating fruit since he was baby.</p>
+    </li>
+    
+    <li class="staff__link">
+      <h2 class="staff__author">
+        <a href="/jekyll-tutorial/authors/ted.html">Ted Doe</a>
+      </h2>
+      <h3 class="staff__position">Writer</h3>
+      <p><p>Ted has been eating fruit since he was baby.</p>
 </p>
-  </li>
-  
-</ul>
+    </li>
+    
+  </ul>
+</div>
+ <footer class="footer">
+  <p class="footer__text">
+    Built by
+    <a href="https://github.com/lauriejefferson">Laurie Jefferson</a> using
+    <a href="https://jekyllrb.com">Jekyll</a>
+  </p>
+  <ul class="footer__list">
+    <li class="footer__link">
+      <a href="#">
+        <ion-icon name="mail-outline" size="large"></ion-icon>
+      </a>
+    </li>
+    <li class="footer__link">
+      <a href="https://github.com/lauriejefferson">
+        <ion-icon name="logo-github" size="large"></ion-icon>
+      </a>
+    </li>
+  </ul>
+</footer>
 
   </body>
 </html>

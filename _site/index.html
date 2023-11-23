@@ -2,6 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8" />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
     <title>Home</title>
     <link
       rel="stylesheet"
@@ -27,7 +35,9 @@
 
   </head>
   <body>
-    <nav>
+    <nav class="nav">
+  <h1 class="logo">My Blog</h1>
+  <div class="nav-list">
   
     
     
@@ -39,25 +49,84 @@
   
     
     
-    <a href="/jekyll-tutorial/blog.html" >Blog</a>
+    <a href="/jekyll-tutorial/blog.html" >Posts</a>
   
     
     
     <a href="/jekyll-tutorial/staff.html" >Staff</a>
   
-
+   </div>
 </nav>
  <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>Home</title>
   </head>
   <body>
-    <h1>hello, world</h1>
+    <div class="hero">
+      <h1 class="title">Welcome to <span class="accent">My Blog!</span></h1>
+      <p class="text">
+        I am a full-stack developer who likes to learn about different tech
+        stacks.
+      </p>
+      <hr />
+    </div>
+    <div class="latest-post">
+      <h1 class="title">Latest Post</h1>
+
+      
+      <article class="post">
+        <h1 class="post__title">Apples</h1>
+        <time datetime="21 Aug 2018"
+          >21 Aug 2018</time
+        >
+        <p>An apple is a sweet, edible fruit produced by an apple tree.</p>
+
+
+        <a href="/jekyll-tutorial/2018/08/21/apples.html" class="post__link"
+          >Read More <span class="post__link--span">&rarr;</span></a
+        >
+      </article>
+      
+      <article class="post">
+        <h1 class="post__title">Bananas</h1>
+        <time datetime="20 Aug 2018"
+          >20 Aug 2018</time
+        >
+        <p>A banana is an edible fruit – botanically a berry – produced by several
+kinds of large herbaceous flowering plants in the genus Musa.</p>
+
+
+        <a href="/jekyll-tutorial/2018/08/20/bananas.html" class="post__link"
+          >Read More <span class="post__link--span">&rarr;</span></a
+        >
+      </article>
+      
+    </div>
   </body>
 </html>
+ <footer class="footer">
+  <p class="footer__text">
+    Built by
+    <a href="https://github.com/lauriejefferson">Laurie Jefferson</a> using
+    <a href="https://jekyllrb.com">Jekyll</a>
+  </p>
+  <ul class="footer__list">
+    <li class="footer__link">
+      <a href="#">
+        <ion-icon name="mail-outline" size="large"></ion-icon>
+      </a>
+    </li>
+    <li class="footer__link">
+      <a href="https://github.com/lauriejefferson">
+        <ion-icon name="logo-github" size="large"></ion-icon>
+      </a>
+    </li>
+  </ul>
+</footer>
 
   </body>
 </html>

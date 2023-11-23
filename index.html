@@ -7,9 +7,33 @@ title: Home
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <title>{{page.title}}</title>
   </head>
   <body>
-    <h1>{{ "Hello, world" | downcase }}</h1>
+    <div class="hero">
+      <h1 class="title">Welcome to <span class="accent">My Blog!</span></h1>
+      <p class="text">
+        I am a full-stack developer who likes to learn about different tech
+        stacks.
+      </p>
+      <hr />
+    </div>
+    <div class="latest-post">
+      <h1 class="title">Latest Post</h1>
+
+      {% for post in site.posts limit:2 %}
+      <article class="post">
+        <h1 class="post__title">{{post.title}}</h1>
+        <time datetime="{{post.date | date_to_string}}"
+          >{{post.date | date_to_string}}</time
+        >
+        {{post.excerpt}}
+        <a href="{{post.url | relative_url }}" class="post__link"
+          >Read More <span class="post__link--span">&rarr;</span></a
+        >
+      </article>
+      {% endfor %}
+    </div>
   </body>
 </html>

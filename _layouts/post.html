@@ -2,13 +2,19 @@
 layout: default
 ---
 
-<h1>{{ page.title }}</h1>
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+<div class="page">
+  <div class="page__header">
+    <h1 class="page__title">{{ page.title }}</h1>
+    <p class="page__text">
+      {{ page.date | date_to_string }} - {{ page.author | | capitalize }}
+    </p>
+  </div>
 
-{{content}}
-<p>
-  {{ page.date | date_to_string }} {% assign author = site.authors | where:
-  'short_name', page.author | first %} {% if author %} -
-  <a href="{{ author.url | relative_url }}">{{author.name}}</a>
-  {% endif %}
-</p>
+  <p class="page__content">{{content}}</p>
+  <p class="page__footer">
+    {{ page.date | date_to_string }} {% assign author = site.authors | where:
+    'short_name', page.author | first %} {% if author %} -
+    <a href="{{ author.url | relative_url }}">{{author.name}}</a>
+    {% endif %}
+  </p>
+</div>
