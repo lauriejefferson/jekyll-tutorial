@@ -75,7 +75,7 @@ li {
   --bg-clr-2: #2b303a;
 
   --clr-link-1: #c62f8c;
-  --clr-link-2: #fa7921;
+  --accent: #c62f8c;
 
   --clr-current-1: greenyellow;
   --clr-current-2: #0affc6;
@@ -87,7 +87,7 @@ li {
 }
 
 $bg-color: var(--bg-clr-1);
-
+$accent: var(--accent);
 $article-color: #31353d;
 $clr-text: #f6f2ff;
 $clr-link: var(--clr-link-1);
@@ -115,9 +115,13 @@ h6 {
   font-weight: var(--fw-700);
 }
 
+.container {
+  margin: 0 auto;
+  max-width: 45em;
+}
 a {
   text-decoration: none;
-  color: $clr-link;
+  color: white;
 }
 
 .nav {
@@ -138,30 +142,91 @@ a {
   flex-direction: column;
 }
 .nav .nav-list .current {
-  color: $clr-current;
+  background: hsla(323, 62%, 48%, 1);
+
+  background: linear-gradient(
+    45deg,
+    hsla(323, 62%, 48%, 1) 0%,
+    hsla(10, 58%, 58%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(323, 62%, 48%, 1) 0%,
+    hsla(10, 58%, 58%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(323, 62%, 48%, 1) 0%,
+    hsla(10, 58%, 58%, 1) 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: var(--fw-700);
 }
 
 li {
   list-style-type: none;
   margin: 2em 0;
 }
+
 .hero {
-  margin-top: 3em;
+  margin: 5em 0;
 }
-.title {
+.hero__title {
   margin: 1em 0;
+  font-size: clamp(2rem, 10vw, 4rem);
+  line-height: 1;
+  font-weight: var(--fw-700);
+  letter-spacing: -0.03em;
 }
 
 .accent {
-  color: $clr-link;
+  background: hsla(323, 62%, 48%, 1);
+
+  background: linear-gradient(
+    45deg,
+    hsla(323, 62%, 48%, 1) 0%,
+    hsla(10, 58%, 58%, 1) 100%
+  );
+
+  background: -moz-linear-gradient(
+    45deg,
+    hsla(323, 62%, 48%, 1) 0%,
+    hsla(10, 58%, 58%, 1) 100%
+  );
+
+  background: -webkit-linear-gradient(
+    45deg,
+    hsla(323, 62%, 48%, 1) 0%,
+    hsla(10, 58%, 58%, 1) 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-hr {
-  margin-top: 2em;
-}
-
-.latest-post {
+.latest-posts {
   margin: 2em 0;
+}
+
+.latest-posts__title {
+  margin-bottom: 0.5em;
+}
+
+.blogroll {
+  margin: 5em 0;
+}
+
+.blogroll__link {
+  margin-bottom: 2em;
+}
+
+.blogroll__link p {
+  line-height: 1.5;
 }
 .post {
   border: 2px dotted #cdd7e0;
@@ -169,6 +234,7 @@ hr {
   padding: 3em 1.5em;
   margin-bottom: 2em;
 }
+
 .post__title {
   margin-bottom: 1em;
 }
@@ -176,8 +242,10 @@ hr {
 .post time {
   margin-bottom: 1em;
 }
+
 .post p {
   margin: 1em 0;
+  line-height: 1.5em;
 }
 
 .post__link {
