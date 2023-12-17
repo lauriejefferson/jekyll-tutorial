@@ -11,29 +11,27 @@ title: Home
     <title>{{page.title}}</title>
   </head>
   <body>
-    <div class="container">
-      <div class="hero">
-        <h1 class="hero__title">
-          Hi! Welcome to <span class="accent">My Blog</span>.<br />
-          Enjoy my latest posts.
-        </h1>
-      </div>
-      <div class="latest-posts">
-        <h1 class="latest-posts__title">Latest Post</h1>
+    <div class="hero">
+      <h1 class="hero__title">
+        Hi! Welcome to <span class="accent">My Blog</span>.<br />
+        Enjoy my latest posts.
+      </h1>
+    </div>
+    <div class="latest-posts">
+      <h1 class="latest-posts__title">Latest Post</h1>
 
-        {% for post in site.posts limit:2 %}
-        <article class="post">
-          <h1 class="post__title">{{post.title}}</h1>
-          <time datetime="{{post.date | date_to_string}}"
-            >{{post.date | date_to_string}}</time
-          >
-          <p>{{post.excerpt}}</p>
-          <a href="{{post.url | relative_url }}" class="post__link"
-            >Read More <span class="post__link--span">&rarr;</span></a
-          >
-        </article>
-        {% endfor %}
-      </div>
+      {% for post in site.posts limit:2 %}
+      <article class="post">
+        <h1 class="post__title">{{post.title}}</h1>
+        <time datetime="{{post.date | date_to_string}}"
+          >{{post.date | date_to_string}}</time
+        >
+        <p>{{post.excerpt}}</p>
+        <a href="{{post.url | relative_url }}" class="post__link"
+          >Read More <span class="post__link--span">&rarr;</span></a
+        >
+      </article>
+      {% endfor %}
     </div>
   </body>
 </html>

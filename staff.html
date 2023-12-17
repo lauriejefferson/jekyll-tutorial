@@ -2,20 +2,18 @@
 title: Staff
 ---
 
-<div class="container">
-  <div class="staff">
-    <h1 class="staff__title">Staff</h1>
+<div class="staff">
+  <h1 class="staff__title">Staff</h1>
 
-    <ul class="staff__list">
-      {% for author in site.authors %}
-      <li class="staff__link">
-        <h2 class="staff__author">
-          <a href="{{ author.url | relative_url }}">{{ author.name }}</a>
-        </h2>
-        <h3 class="staff__position">{{ author.position }}</h3>
-        <p>{{ author.content | markdownify }}</p>
-      </li>
-      {% endfor %}
-    </ul>
-  </div>
+  <ul class="staff__list">
+    {% for author in site.authors %}
+    <li class="staff__link">
+      <h2 class="staff__author">
+        <a href="{{ author.url | relative_url }}">{{ author.name }}</a>
+      </h2>
+      <h3 class="staff__position">{{ author.position }}</h3>
+      <p>{{ author.content | markdownify }}</p>
+    </li>
+    {% endfor %}
+  </ul>
 </div>

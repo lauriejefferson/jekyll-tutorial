@@ -2,15 +2,13 @@
 title: Blog
 ---
 
-<div class="container">
-  <ul class="blogroll">
-    {% for post in site.posts %}
-    <li class="blogroll__link">
-      <h2 class="blogroll__posts">
-        <a href="{{post.url | relative_url }}">{{post.title}}</a>
-      </h2>
-      {{ post.excerpt }}
-    </li>
-    {% endfor %}
-  </ul>
-</div>
+<ul class="blogroll">
+  {% for post in site.posts %}
+  <li class="blogroll__link">
+    <h2 class="blogroll__posts">
+      <a href="{{post.url | relative_url }}">{{post.title}}</a>
+    </h2>
+    {{ post.excerpt }}
+  </li>
+  {% endfor %}
+</ul>
