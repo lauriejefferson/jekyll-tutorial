@@ -118,7 +118,12 @@ h6 {
 .container {
   margin: 0 auto;
   max-width: 45em;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100vh;
 }
+
 a {
   text-decoration: none;
   color: white;
@@ -174,8 +179,9 @@ li {
 }
 
 .hero {
-  margin: 5em 0;
+  margin: 3em 0;
 }
+
 .hero__title {
   margin: 1em 0;
   font-size: clamp(2rem, 10vw, 4rem);
